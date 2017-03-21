@@ -42,11 +42,12 @@ public void buscar(){
             if(lista.get(i).getTitulo().equals(elemBus)){
               atopado=true;
         
-        System.out.println("El libro "+getTitulo()+" esta, su precio es:  "+getPrecio());
+        System.out.println("El libro "+pedirTitulo()+" esta, su precio es:  "+getPrecio());
             }
-            else if(atopado==false)
-        System.out.println("O libro "+getTitulo()+" non esta");
       }
+           if(atopado==false)
+        System.out.println("O libro "+getTitulo()+" non esta");
+      
   
 
 }
@@ -60,6 +61,21 @@ public void borrar(){
                 lista.remove(i);
             }
      }
+}
+public void modificar(){
+ String modificar=JOptionPane.showInputDialog("titulo del libro que quieres modificar:");
+ for(int i=0;i<lista.size();i++){
+     if(lista.get(i).getTitulo().equals(modificar)){
+         lista.get(i).setTitulo(pedirTitulo());
+         
+     }
+ }
+ 
+    
+}
+
+public void ordenar(){
+       Collections.sort(lista, null);
 }
  public void escribirLibreria(){
         try{

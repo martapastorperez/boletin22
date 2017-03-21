@@ -15,7 +15,7 @@ public class Boletin22 {
       do{
   
             try{
-        op = Integer.parseInt(JOptionPane.showInputDialog("***MENU*** \n1. Introduce  \n2.visualizar \n3.buscar \n4. borra \n5. escribir \n6. salir"));
+        op = Integer.parseInt(JOptionPane.showInputDialog("***MENU*** \n1. Introduce  \n2.visualizar \n3.buscar \n4. borra \n5.modificar \n6.ordenar \n7. escribir \n8. salir"));
         
             }catch(Exception e){
                 System.out.println(e.getMessage());
@@ -35,13 +35,19 @@ public class Boletin22 {
                libre.borrar();
                 break;
             case 5:
-                libre.escribirLibreria();
+                libre.modificar();
                 break;
             case 6:
+                 libre.ordenar();
+                break;
+            case 7:
+                libre.escribirLibreria();
+                break;
+            case 8:
                 System.exit(0);
         
                 }
-    }while (op<6);
+    }while (op<8);
 }
 
     }
